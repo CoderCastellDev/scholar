@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" type="text/javascript"></script>
+    
+    <script src="script.js" defer></script> 
 </head>
 <body>
+    <script>console.log("1 runnning before body redendered")</script>
+    <script src="3.js" ></script>
+    <!-- <script src="script.js"></script>  -->
     <header>
         <h1>Welcome to Your Interactive Website</h1>
     </header>
@@ -21,6 +25,8 @@
     <footer>
         <p>&copy; 2024 Your Website</p>
     </footer>
-    
+    <script>console.log("2 runnning after  body redendered")</script>
+
 </body>
 </html>
+
