@@ -1,5 +1,5 @@
 // JavaScript code for interactivity
-console.log("0 runnning before body redendered")
+// console.log("0 runnning before body redendered")
 
 // Get references to HTML elements
 const countDisplay = document.getElementById('count');
