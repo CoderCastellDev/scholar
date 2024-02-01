@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,7 +18,13 @@ h1 {
 }
 
 main {
-    padding: 20px;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 20px; /* Add padding around the content */
+    border: 2px solid #333; /* Add border around the main section */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    background-color: #f8f9fa; /* Add background color */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,5 +82,6 @@ ul {
 li {
     margin-bottom: 5px;
 }
+
 
 
