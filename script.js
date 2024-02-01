@@ -1,26 +1,58 @@
-// JavaScript code for interactivity
-// console.log("0 runnning before body redendered")
+// JavaScript for dark mode toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
 
-// Get references to HTML elements
-const countDisplay = document.getElementById('count');
-const incrementBtn = document.getElementById('incrementBtn');
-const resetBtn = document.getElementById('resetBtn');
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+    
+    // Toggle button color
+    const isDarkMode = body.classList.contains('dark-mode');
+    if (isDarkMode) {
+        document.documentElement.style.setProperty('--button-color-light', 'white');
+        document.documentElement.style.setProperty('--button-color-dark', 'black');
+    } else {
+        document.documentElement.style.setProperty('--button-color-light', 'black');
+        document.documentElement.style.setProperty('--button-color-dark', 'white');
+    }
+});
 
-let count = 0;
-
-// Function to increment the count
-function incrementCount() {
-    count++;
-    countDisplay.textContent = count;
-    // countDisplay = {};
+// Check if dark mode is enabled from local storage
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+if (isDarkMode) {
+    body.classList.add('dark-mode');
+    document.documentElement.style.setProperty('--button-color-light', 'white');
+    document.documentElement.style.setProperty('--button-color-dark', 'black');
 }
 
-// Function to reset the count
-function resetCount() {
-    count = 0;
-    countDisplay.textContent = count;
+
+function increaseExperience(skillId) {
+    var skillElement = document.getElementById(skillId);
+    var experienceElement = skillElement.querySelector('.experience');
+    var currentExperience = parseInt(experienceElement.textContent);
+    var newExperience = currentExperience + 100; // Increase by 100 (adjust as needed)
+    var maxExperience = 1000; // Maximum experience level (adjust as needed)
+    if (newExperience > maxExperience) {
+        newExperience = maxExperience; // Cap the experience at the maximum level
+    }
+    experienceElement.textContent = newExperience;
+    // ???? bhai ye value kese update ho raha he
+    // Update the level display
+    // var levelElement = skillElement.querySelector('.level');
+    // levelElement.textContent = 'Level ' + Math.floor(newExperience / 100); // Assuming each level requires 100 experience points
 }
 
-// Add event listeners to buttons
-incrementBtn.addEventListener('click', incrementCount);
-resetBtn.addEventListener('click', resetCount);
+
+
+function decreaseExperience(skillId) {
+    var skillElement = document.getElementById(skillId);
+    var experienceElement = skillElement.querySelector('.experience');
+    var currentExperience = parseInt(experienceElement.textContent);
+    var newExperience = currentExperience - 100; // Decrease by 100 (adjust as needed)
+    var minExperience = 0; // Minimum experience level (adjust as needed)
+    if (newExperience < minExperience) {
+        newExperience = minExperience; // Cap the experience at the minimum level
+    }
+    experienceElement.textContent = newExperience;
+    // updateLevel(skillElement, newExperience);
+}

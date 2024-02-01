@@ -11,6 +11,7 @@
 <body>
     <header>
         <h1>Tech System</h1>
+        <button id="dark-mode-toggle">Dark Mode</button>
     </header>
     <div class="container">
         <main>
@@ -18,13 +19,95 @@
                 <!-- Core Science Branch -->
                 <h2>Core Science</h2>
                 <ul>
-                    <li>Mathematics: Level 0 (0/1000)</li>
-                    <li>Physics: Level 0 (0/1000)</li>
-                    <li>Biology: Level 0 (0/1000)</li>
-                    <li>Engineering: Level 0 (0/1000)</li>
-                    <li>Materials Science: Level 0 (0/1000)</li>
-                    <li>Energy Science: Level 0 (0/1000)</li>
-                    <li>Information Science: Level 0 (0/1000)</li>
+                    <li id="mathematics">
+                        <div class="skill-box">
+                            <div class="upper-part">
+                                <span class="skill-name">Mathematics:</span> 
+                                <span class="level">Level <span class="experience">0</span>/1000</span>
+                            </div>
+                            <div class="lower-part">
+                                <button onclick="increaseExperience('mathematics')">Increase</button>
+                                <button onclick="decreaseExperience('mathematics')">Decrease</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="physics">
+                        <div class="skill-box">
+                            <div class="upper-part">
+                                <span class="skill-name">Physics :</span> 
+                                <span class="level">Level <span class="experience">0</span>/1000</span>
+                            </div>
+                            <div class="lower-part">
+                                <button onclick="increaseExperience('physics')">Increase</button>
+                                <button onclick="decreaseExperience('physics')">Decrease</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="biology">
+                        <div class="skill-box">
+                            <div class="upper-part">
+                                <span class="skill-name">Biology :</span> 
+                                <span class="level">Level <span class="experience">0</span>/1000</span>
+                            </div>
+                            <div class="lower-part">
+                                <button onclick="increaseExperience('biology')">Increase</button>
+                                <button onclick="decreaseExperience('biology')">Decrease</button>
+                            </div>
+                        </div>
+                    </li>
+                    </li>
+                    <li id="engineering">
+                        <div class="skill-box">
+                            <div class="upper-part">
+                                <span class="skill-name">Engineering:</span> 
+                                <span class="level">Level <span class="experience">0</span>/1000</span>
+                            </div>
+                            <div class="lower-part">
+                                <button onclick="increaseExperience('engineering')">Increase</button>
+                                <button onclick="decreaseExperience('engineering')">Decrease</button>
+                            </div>
+                        </div>
+                    </li>
+                    </li>
+                    <li id="material_science">
+                        <div class="skill-box">
+                            <div class="upper-part">
+                                <span class="skill-name">Material Science:</span> 
+                                <span class="level">Level <span class="experience">0</span>/1000</span>
+                            </div>
+                            <div class="lower-part">
+                                <button onclick="increaseExperience('material_science')">Increase</button>
+                                <button onclick="decreaseExperience('material_science')">Decrease</button>
+                            </div>
+                        </div>
+                    </li>
+                    </li>
+                    <li id="energy_science">
+                        <div class="skill-box">
+                            <div class="upper-part">
+                                <span class="skill-name">Energy Science:</span> 
+                                <span class="level">Level <span class="experience">0</span>/1000</span>
+                            </div>
+                            <div class="lower-part">
+                                <button onclick="increaseExperience('energy_science')">Increase</button>
+                                <button onclick="decreaseExperience('energy_science')">Decrease</button>
+                            </div>
+                        </div>
+                    </li>
+                    </li>
+                    <li id="information_science">
+                        <div class="skill-box">
+                            <div class="upper-part">
+                                <span class="skill-name">Information Science:</span> 
+                                <span class="level">Level <span class="experience">0</span>/1000</span>
+                            </div>
+                            <div class="lower-part">
+                                <button onclick="increaseExperience('information_science')">Increase</button>
+                                <button onclick="decreaseExperience('information_science')">Decrease</button>
+                            </div>
+                        </div>
+                    </li>
+                    </li>
                 </ul>
             </section>
             <section id="technology-branch">
@@ -45,8 +128,8 @@
             <section id="missions">
                 <!-- Missions Section -->
                 <div>
-                <h2>Missions</h2>
-                <p>No missions available</p>
+                    <h2>Missions</h2>
+                    <p>No missions available</p>
                 </div>
             </section>
         </main>

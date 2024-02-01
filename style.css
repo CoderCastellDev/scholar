@@ -1,3 +1,7 @@
+:root {
+    --button-color-light: black;
+    --button-color-dark: white;
+  }
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,10 +13,46 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
 }
 
 h1 {
+    margin: 0 auto 0 0; /* Set right margin to auto to push the heading to the left */
+}
+
+
+
+h1 {
     margin: 0;
+}
+
+
+
+
+section {
+    border-bottom: 2px solid #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#dark-mode-toggle {
+    margin-left: 10px; /* Adjust the spacing between the button and the heading */
+    padding: 10px 20px; /* Add padding to the button */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: var(--button-color-light); /* Default button color in light mode */
+    color: #fff; /* Set button text color */
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: var(--button-color-dark); /* Button color in dark mode */
+}
+
+#dark-mode-toggle:hover {
+    background-color: #85c1c8; /* Darken button color on hover */
 }
 
 .container {
@@ -32,11 +72,6 @@ main {
     align-items: center;
     justify-content: center;
    
-}
-
-section {
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 /* Styles for Core Science section */
@@ -87,12 +122,49 @@ li {
     margin-bottom: 5px;
 }
 
-footer {
-    background-color: #333;
+
+.dark-mode {
+    background-color: #111;
     color: #fff;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
+
+.dark-mode header {
+    background-color: #222;
+}
+
+.dark-mode h1 {
+    color: #fff;
+}
+.dark-mode main {
+    background-color: #222;
+    border-color: #007bff;
+    color: #fff;
+}
+.dark-mode section{
+    border-bottom: 2px solid #ffffff;
+}
+
+
+.skill-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.upper-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.lower-part {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+.lower-part button {
+    margin: 0 5px; /* Add some space between the buttons */
+}
+
