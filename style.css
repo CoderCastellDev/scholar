@@ -27,9 +27,39 @@ section {
     margin-bottom: 20px;
     text-align: center;
 }
+/* Styles for Core Science section */
+#core-science h2 {
+    color: #fff; /* White text color */
+    background-color: #333; /* Blue banner color */
+    padding: 10px 20px; /* Padding for the banner */
+}
 
-h2 {
-    font-size: 1.5rem;
+/* Styles for Technology Branch section */
+#technology-branch h2 {
+    color: #fff; /* White text color */
+    background-color: #333; /* Green banner color */
+    padding: 10px 20px; /* Padding for the banner */
+}
+
+/* Styles for Technical Blueprint section */
+#technical-blueprint h2 {
+    color: #fff; /* White text color */
+    background-color: #333; /* Red banner color */
+    padding: 10px 20px; /* Padding for the banner */
+}
+
+/* Styles for General Points section */
+#general-points h2 {
+    color: #fff; /* White text color */
+    background-color: #ffc107; /* Yellow banner color */
+    padding: 10px 20px; /* Padding for the banner */
+}
+
+/* Styles for Missions section */
+#missions h2 {
+    color: #fff; /* White text color */
+    background-color: #6c757d; /* Gray banner color */
+    padding: 10px 20px; /* Padding for the banner */
 }
 
 ul {
